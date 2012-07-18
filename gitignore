@@ -1,0 +1,35 @@
+
+# damn stuffs from mac
+.DS_Store
+profile
+
+# ruby projects
+config/database.yml
+log/*
+*.sqlite3
+db/schema.rb
+.rvmrc
+public/images/products/*
+
+# vim stuffs
+*.swp
+*.swo
+
+# xcode stuffs
+build/*
+*.pyc
+*~.nib/
+*.pbxuser
+*.perspective*
+*.mode1v3
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+*.moved-aside

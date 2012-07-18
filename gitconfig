@@ -1,0 +1,39 @@
+[include]
+  path = "~/Dropbox/config_files/gitconfig.github"
+[user]
+	name = Weldys Santos
+  email = weldyss@gmail.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+  pager = true
+  interactive = auto
+[alias]
+  pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  st   = status
+  ci   = commit
+  co   = checkout
+  w    = whatchanged
+  br   = branch
+  df   = diff
+  lg   = log --graph --oneline --decorate
+  pl   = pull
+  ps   = push
+  plm  = pull origin master
+  pld  = pull origin dev
+  pod  = push origin dev
+  pom  = push origin master
+  info = config --list
+  ch   = log --oneline --reverse
+  tags = tag -n1 -l
+[diff]
+  renames = copy
+[apply]
+  whitespace = fix
+[core]
+  editor = /usr/local/bin/vim
+  excludesfile = /Users/weldyss/.gitignore
+[help]
+  autocorrect = 1
