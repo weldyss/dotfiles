@@ -1,0 +1,14 @@
+Host seusite
+HostName 50.116.42.8
+User seusite
+Port 22
+
+Host hulk
+HostName 50.116.30.73
+User weldyss
+Port 22
+
+Host vsh
+HostName 10.211.55.13 
+User weldyss
+Port 22
