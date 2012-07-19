@@ -20,6 +20,7 @@ alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias guard="guard -n f -c -A"
 alias vsh="cd ~/Code/servers && vagrant ssh"
+alias nwsh="cd ~/Code/gpm && vagrant ssh"
 
 eval "$(hub alias -s)"
 # hub tab-completion script for zsh.
