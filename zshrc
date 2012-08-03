@@ -3,7 +3,7 @@ export RUBYOPT=-Ku
 export EDITOR="/usr/local/bin/vim"
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="miloshadzic"
+ZSH_THEME="weldeastwood"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias migrate="rake db:migrate && rake db:test:prepare"
@@ -49,6 +49,8 @@ fi
 plugins=(ruby rails3 zsh-syntax-highlighting git bundler)
 
 source $ZSH/oh-my-zsh.sh
+
+#bindkey -v
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
