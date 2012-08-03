@@ -1,0 +1,9 @@
+[submodule "bundles/oh-my-zsh"]
+	path = bundles/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh/
+[submodule "bundles/vimfiles"]
+	path = bundles/vimfiles
+	url = git://github.com/weldyss/vimfiles.git
+[submodule "bundles/vagrantfiles"]
+	path = bundles/vagrantfiles
+	url = git://github.com/weldyss/vagrantfiles.git
