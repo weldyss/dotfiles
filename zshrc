@@ -1,9 +1,8 @@
 export LC_TYPE=en_US.UTF-8
 export RUBYOPT=-Ku
-export EDITOR="/usr/local/bin/vim"
 
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="weldeastwood"
+ZSH_THEME="eastwood"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias migrate="rake db:migrate && rake db:test:prepare"
@@ -19,8 +18,15 @@ alias be="b exec"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias guard="guard -n f -c -A"
-alias vsh="cd ~/Code/servers && vagrant ssh"
-alias nwsh="cd ~/Code/gpm && vagrant ssh"
+alias vsh="cd ~/Code && vagrant ssh"
+alias vup="cd ~/Code && vagrant up"
+alias open_ops="open ~/Dropbox/My\ Secrets/ops"
+alias openops="open_ops"
+
+function vhalt() {
+  cd ~/Code && vagrant suspend $@ && vagrant halt $@
+}
+
 
 eval "$(hub alias -s)"
 # hub tab-completion script for zsh.
@@ -49,9 +55,4 @@ fi
 plugins=(ruby rails3 zsh-syntax-highlighting git bundler)
 
 source $ZSH/oh-my-zsh.sh
-
-#bindkey -v
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=/usr/local/bin:$PATH

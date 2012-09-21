@@ -1,6 +1,6 @@
-Host seusite
-HostName 50.116.42.8
-User seusite
+Host hulk_root
+HostName 50.116.30.73
+User root
 Port 22
 
 Host hulk
