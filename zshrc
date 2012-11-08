@@ -1,5 +1,7 @@
 export LC_TYPE=en_US.UTF-8
 export RUBYOPT=-Ku
+export AWS_ACCESS_KEY=AKIAIYXTU4C3WSKG7DNA
+export AWS_SECRET_ACCESS_KEY=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
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="eastwood"
@@ -7,7 +9,6 @@ ZSH_THEME="eastwood"
 alias tmux="TERM=screen-256color-bce tmux"
 alias migrate="rake db:migrate && rake db:test:prepare"
 alias irb="irb --readline --prompt-mode simple"
-alias mongo="/usr/local/Cellar/mongodb/2.0.6-x86_64/bin/mongod --dbpath=$HOME/.mongodb/data/db"
 alias mysql="mysql -u root -proot"
 alias migrate="rake db:migrate && rake db:test:prepare"
 alias b="bundle"
@@ -20,13 +21,15 @@ alias redis="redis-server /usr/local/etc/redis.conf"
 alias guard="guard -n f -c -A"
 alias vsh="cd ~/Code && vagrant ssh"
 alias vup="cd ~/Code && vagrant up"
+alias vsleep="~/Code && vagrant suspend"
 alias open_ops="open ~/Dropbox/My\ Secrets/ops"
 alias openops="open_ops"
+
+alias nfy="terminal-notifier"
 
 function vhalt() {
   cd ~/Code && vagrant suspend $@ && vagrant halt $@
 }
-
 
 eval "$(hub alias -s)"
 # hub tab-completion script for zsh.
@@ -55,4 +58,4 @@ fi
 plugins=(ruby rails3 zsh-syntax-highlighting git bundler)
 
 source $ZSH/oh-my-zsh.sh
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/.aws:$PATH
