@@ -1,7 +1,6 @@
-export LC_TYPE=en_US.UTF-8
+export LANG=en_US.UTF-8                                                                                                                                                                                                                                                                                                                       
+export LC_ALL=en_US.UTF-8
 export RUBYOPT=-Ku
-export AWS_ACCESS_KEY=AKIAIYXTU4C3WSKG7DNA
-export AWS_SECRET_ACCESS_KEY=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
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="eastwood"
@@ -58,4 +57,4 @@ fi
 plugins=(ruby rails3 zsh-syntax-highlighting git bundler)
 
 source $ZSH/oh-my-zsh.sh
-export PATH=/usr/local/bin:$HOME/.aws:$PATH
+export PATH=/usr/local/bin:$PATH
