@@ -5,7 +5,6 @@ export RUBYOPT=-Ku
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="eastwood"
 
-alias tmux="TERM=screen-256color-bce tmux"
 alias migrate="rake db:migrate && rake db:test:prepare"
 alias irb="irb --readline --prompt-mode simple"
 alias mysql="mysql -u root -proot"
@@ -18,17 +17,17 @@ alias be="b exec"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias guard="guard -n f -c -A"
+
+# vagrant aliases
 alias vsh="cd ~/Code && vagrant ssh"
 alias vup="cd ~/Code && vagrant up"
 alias vsleep="~/Code && vagrant suspend"
-alias open_ops="open ~/Dropbox/My\ Secrets/ops"
-alias openops="open_ops"
-
-alias nfy="terminal-notifier"
-
 function vhalt() {
   cd ~/Code && vagrant suspend $@ && vagrant halt $@
 }
+alias vf5="~/Code && vagrant reload"
+
+alias nfy="terminal-notifier"
 
 eval "$(hub alias -s)"
 # hub tab-completion script for zsh.

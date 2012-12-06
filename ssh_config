@@ -1,14 +1,4 @@
-Host hulk_root
-HostName 50.116.30.73
-User root
-Port 22
-
-Host hulk
-HostName 50.116.30.73
-User weldyss
-Port 22
-
-Host vsh
-HostName 10.211.55.13 
-User weldyss
+Host name
+HostName where
+User who
 Port 22
