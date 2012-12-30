@@ -9,11 +9,7 @@ alias migrate="rake db:migrate && rake db:test:prepare"
 alias irb="irb --readline --prompt-mode simple"
 alias mysql="mysql -u root -proot"
 alias migrate="rake db:migrate && rake db:test:prepare"
-alias b="bundle"
-alias bi="b install"
 alias bundle_start="bi --gemfile=~/.gemfile"
-alias bu="b update"
-alias be="b exec"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias guard="guard -n f -c -A"
@@ -53,7 +49,7 @@ if declare -f _git_commands > /dev/null; then
   eval "$(declare -f _git_commands | sed -e 's/base_commands=(/base_commands=(${_hub_commands} /')"
 fi
 
-plugins=(ruby rails3 zsh-syntax-highlighting git bundler)
+plugins=(ruby rails3 vagrant zsh-syntax-highlighting git bundler)
 
 source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$PATH
