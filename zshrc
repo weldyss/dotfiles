@@ -21,6 +21,9 @@ alias vsleep="~/Code && vagrant suspend"
 function vhalt() {
   cd ~/Code && vagrant suspend $@ && vagrant halt $@
 }
+function vgo() {
+  vup $@ && vsh $@
+}
 alias vf5="~/Code && vagrant reload"
 
 alias nfy="terminal-notifier"
