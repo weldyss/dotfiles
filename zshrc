@@ -1,6 +1,5 @@
 export LANG=en_US.UTF-8                                                                                                                                                                                                                                                                                                                       
 export LC_ALL=en_US.UTF-8
-export RUBYOPT=-Ku
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="miloshadzic"
@@ -13,6 +12,8 @@ alias bundle_start="bi --gemfile=~/.gemfile"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 alias guard="guard -n f -c -A"
+alias cloud="ssh cloud"
+alias terminal-notifier="/Applications/Utilities/terminal-notifier.app/Contents/MacOS/terminal-notifier"
 
 # vagrant aliases
 alias vsh="cd ~/Code && vagrant ssh"
@@ -56,3 +57,6 @@ plugins=(ruby rails3 vagrant zsh-syntax-highlighting git bundler)
 
 source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
