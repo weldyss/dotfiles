@@ -33,7 +33,7 @@
 [apply]
   whitespace = fix
 [core]
-  editor = /usr/local/bin/vim
+  editor = vim
   excludesfile = /Users/weldyss/.gitignore
 [help]
   autocorrect = 1
