@@ -1,4 +1,4 @@
-gems = %w(rubygems irb/completion irb/ext/save-history wirble pp)
+gems = %w(rubygems irb/completion irb/ext/save-history awesome_print wirble pp)
 
 gems.each do |gem_name|
   begin
@@ -20,6 +20,10 @@ end
 if defined?(Wirble) 
   Wirble.init
   Wirble.colorize
+end
+
+if defined?(AwesomePrint)
+  AwesomePrint.irb!
 end
 
 if defined?(Hirb)

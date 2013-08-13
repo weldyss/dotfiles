@@ -1,4 +1,4 @@
-export LANG=en_US.UTF-8                                                                                                                                                                                                                                                                                                                       
+export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 ZSH=$HOME/.oh-my-zsh
@@ -58,5 +58,4 @@ plugins=(ruby rails3 vagrant zsh-syntax-highlighting git bundler)
 source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:$PATH
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$(brew --prefix ruby)/bin:$PATH

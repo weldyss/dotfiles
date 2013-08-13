@@ -1,4 +1,4 @@
-Host name
-HostName where
-User who
+Host my_ip
+HostName my_host_name
+User weldyss
 Port 22
