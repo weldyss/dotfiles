@@ -44,4 +44,4 @@
 	full-name = Weldys Santos
 	integration-branch = dev
 [push]
-	default = simple
+	default = current

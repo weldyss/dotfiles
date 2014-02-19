@@ -9,6 +9,8 @@ db/schema.rb
 .rvmrc
 public/images/products/*
 .apprc
+vendor/*
+.bundle/*
 
 # vim stuffs
 *.swp

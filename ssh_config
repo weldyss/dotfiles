@@ -1,4 +1,9 @@
-Host my_ip
-HostName my_host_name
+Host emprestala
+HostName emprestala.cloudapp.net
+User emprestala 
+Port 22
+
+Host weldserver
+HostName weldserver.cloudapp.net
 User weldyss
 Port 22
