@@ -8,9 +8,11 @@ log/*
 db/schema.rb
 .rvmrc
 public/images/products/*
+public/assets/*
 .apprc
 vendor/*
 .bundle/*
+.env
 
 # vim stuffs
 *.swp

@@ -12,13 +12,14 @@
   interactive = auto
 [alias]
   pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
+  a    = add
   st   = status
   ci   = commit
   co   = checkout
   w    = whatchanged
   br   = branch
   df   = diff
-  lg   = log --graph --oneline --decorate
+	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pl   = pull
   ps   = push
   plm  = pull origin master
@@ -45,3 +46,11 @@
 	integration-branch = dev
 [push]
 	default = current
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
