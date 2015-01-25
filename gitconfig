@@ -1,5 +1,6 @@
-[include]
-  path = "~/Dropbox/config_files/gitconfig.github"
+[github]
+  user = weldyss
+  token = !"cat ~/.git-oauth-token | tr -d \"\n\"" 
 [user]
 	name = Weldys Santos
   email = weldyss@gmail.com

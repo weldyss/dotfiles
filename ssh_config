@@ -2,3 +2,8 @@ Host weldserver
 HostName weldserver.cloudapp.net
 User weldyss
 Port 22
+
+Host trendlabs
+HostName trendcards.cloudapp.net
+User trendcards
+Port 22
