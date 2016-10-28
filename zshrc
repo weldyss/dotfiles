@@ -25,6 +25,7 @@ alias guard="guard -n f -c -A"
 alias rails="bundle exec rails"
 alias rake="bundle exec rake"
 alias migrate="rake db:migrate && rake db:test:prepare"
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # binding keys
 
@@ -74,5 +75,6 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_NO_STORE
 
+export ANDROID_HOME=/Volumes/1TB/Android
 export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
