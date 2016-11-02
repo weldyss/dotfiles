@@ -16,19 +16,20 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-alias irb="irb --readline --prompt-mode simple"
 alias mysql="mysql -u root -proot"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 
-alias guard="guard -n f -c -A"
-alias rails="bundle exec rails"
-alias rake="bundle exec rake"
+# Ruby terminal snippets
+alias be="bundle exec"
+alias bi="bundle install"
+alias irb="irb --readline --prompt-mode simple"
 alias migrate="rake db:migrate && rake db:test:prepare"
+
+# just to macOS
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # binding keys
-
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
