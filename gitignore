@@ -37,4 +37,7 @@ build/*
 xcuserdata
 *.moved-aside
 
+#javascript projects
+node_modules
+
 Icon
