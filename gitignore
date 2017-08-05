@@ -1,6 +1,5 @@
 # damn stuffs from mac
 .DS_Store
-profile
 # ruby projects
 config/database.yml
 log/*
