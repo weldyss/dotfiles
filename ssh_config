@@ -2,3 +2,6 @@ Host weldserver
 HostName weldyss.cloudapp.net
 User weldyss
 Port 22
+
+Host git.ionicjs.com
+    IdentityFile /Users/weldyss/.ssh/ionic/242869

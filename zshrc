@@ -80,3 +80,4 @@ setopt HIST_NO_STORE
 export ANDROID_HOME=/Volumes/1TB/Android
 export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
+eval "$(hub alias -s)"
