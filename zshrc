@@ -25,6 +25,7 @@ alias be="bundle exec"
 alias bi="bundle install"
 alias irb="irb --readline --prompt-mode simple"
 alias migrate="rake db:migrate && rake db:test:prepare"
+alias foreman="bundle exec foreman start"
 
 # just to macOS
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
@@ -77,7 +78,6 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_NO_STORE
 
-export ANDROID_HOME=/Volumes/1TB/Android
 export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 eval "$(hub alias -s)"
