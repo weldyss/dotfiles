@@ -24,7 +24,7 @@ alias redis="redis-server /usr/local/etc/redis.conf"
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
 alias irb="irb --readline --prompt-mode simple"
-alias migrate="bundle exec rails db:migrate && rake db:test:prepare"
+alias migrate="bundle exec rails db:migrate"
 alias foreman="bundle exec foreman start"
 
 # just to macOS
