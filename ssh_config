@@ -5,3 +5,8 @@ Port 22
 
 Host git.ionicjs.com
     IdentityFile /Users/weldyss/.ssh/ionic/242869
+
+Host rpi
+HostName 192.168.15.8
+User ubuntu
+Port 22
