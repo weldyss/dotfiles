@@ -20,12 +20,22 @@ alias mysql="mysql -u root -proot"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
 
+# Terminal common alias
+alias cdd="cd ./Developer"
+
 # Ruby terminal snippets
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
 alias irb="irb --readline --prompt-mode simple"
 alias migrate="bundle exec rails db:migrate"
 alias foreman="bundle exec foreman start"
+
+# Docker alias
+alias dcb="docker compose build"
+alias dcu="docker compose up"
+alias dcr="docker compose run -rm"
+alias dce="docker compose exec"
+alias dcd="docker compose down" 
 
 # just to macOS
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
