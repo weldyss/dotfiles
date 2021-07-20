@@ -3,7 +3,7 @@
   token = !"cat ~/.git-oauth-token | tr -d \"\n\"" 
 [user]
 	name = Weldys Santos
-  email = weldyss@gmail.com
+	email = weldys@icloud.com
 [color]
   diff = auto
   status = auto
