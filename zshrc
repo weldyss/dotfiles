@@ -33,7 +33,7 @@ alias foreman="bundle exec foreman start"
 # Docker alias
 alias dcb="docker compose build"
 alias dcu="docker compose up"
-alias dcr="docker compose run -rm"
+alias dcr="docker compose run --rm"
 alias dce="docker compose exec"
 alias dcd="docker compose down" 
 
@@ -91,3 +91,4 @@ setopt HIST_NO_STORE
 export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 eval "$(hub alias -s)"
+eval "$(rbenv init -)"
