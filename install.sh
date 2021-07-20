@@ -15,5 +15,6 @@ ln -fs $DOTPATH/gitignore ~/.gitignore
 ln -fs $DOTPATH/irbrc ~/.irbrc
 ln -fs $DOTPATH/rspec ~/.rspec
 ln -fs $DOTPATH/ssh_config ~/.ssh/config
+ln -fs $DOTPATH/gitmessage ~/.gitmessage
 ln -fs $DOTPATH/zshrc ~/.zshrc
 ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
