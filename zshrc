@@ -75,7 +75,6 @@ zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
 
 autoload -U colors && colors
 PS1="%{$fg[yellow]%}%1d%  %{$reset_color%}%% "
-#PS1="%{$fg[yellow]%}%~ %{$reset_color%}%% "
 
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
