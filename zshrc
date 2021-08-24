@@ -37,6 +37,9 @@ alias dcr="docker compose run --rm"
 alias dce="docker compose exec"
 alias dcd="docker compose down" 
 
+# raspberry shortcuts
+alias unlock_pi="ssh -i ~/.ssh/id_dropbear root@rpi -p4444"
+
 # just to macOS
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
