@@ -16,12 +16,8 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-alias mysql="mysql -u root -proot"
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias redis="redis-server /usr/local/etc/redis.conf"
-
-# Terminal common alias
-alias cdd="cd ./Developer"
 
 # Ruby terminal snippets
 alias be="bundle exec"
@@ -77,7 +73,8 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
 
 autoload -U colors && colors
-PS1="%{$fg[yellow]%}%1d%  %{$reset_color%}%% "
+# PS1="%{$fg[yellow]%}%1d%  %{$reset_color%}%% "
+PS1="%F{yellow}%~%f % %{$reset_color%}%% "
 
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
@@ -94,3 +91,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 eval "$(hub alias -s)"
 eval "$(rbenv init -)"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
