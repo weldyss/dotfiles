@@ -94,5 +94,3 @@ if [[ `uname` == "Darwin"  ]]; then
 fi
 
 source $HOME/.extras.zsh
-
-eval "$(rbenv init -)"
