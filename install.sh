@@ -19,3 +19,6 @@ ln -fs $DOTPATH/gitmessage ~/.gitmessage
 cp $DOTPATH/extras.zsh.example ~/.extras.zsh
 ln -fs $DOTPATH/zshrc ~/.zshrc
 ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
+
+mkdir -p ~/.tmux/plugins
+git clone https://github.com:/tmux-plugins/tpm ~/.tmux/plugins/tpm
