@@ -87,10 +87,12 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_NO_STORE
 
-export PATH=/usr/local/bin:$PATH
-export PATH=$(brew --prefix ruby)/bin:$PATH
-eval "$(hub alias -s)"
-eval "$(rbenv init -)"
 
-# Added by serverless binary installer
-export PATH="$HOME/.serverless/bin:$PATH"
+if [[ `uname` == "Darwin"  ]]; then
+  export PATH=/usr/local/bin:$PATH
+  export PATH=$(brew --prefix ruby)/bin:$PATH
+fi
+
+source $HOME/.extras.zsh
+
+eval "$(rbenv init -)"
