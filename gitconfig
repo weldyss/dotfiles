@@ -2,8 +2,9 @@
   user = weldyss
   token = !"cat ~/.git-oauth-token | tr -d \"\n\"" 
 [user]
-	name = Weldys Santos
-	email = weldys@icloud.com
+  name = Weldys Santos
+  email = weldys@icloud.com
+  signingKey = 0BA34DA9
 [color]
   diff = auto
   status = auto
@@ -20,7 +21,7 @@
   w    = whatchanged
   br   = branch
   df   = diff
-	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pl   = pull
   ps   = push
   plm  = pull origin master
@@ -41,10 +42,6 @@
   autocorrect = 1
 [rerere]
   enabled = 1
-[pivotal]
-	api-token = 3ea11b3f37b9ca7656fbf17531649a5b
-	full-name = Weldys Santos
-	integration-branch = dev
 [push]
 	default = current
 [branch]
@@ -57,5 +54,8 @@
 	required = true
 [commit]
 	template = /Users/weldyss/.gitmessage
+	gpgsign = true
 [init]
 	defaultBranch = main
+[gpg]
+	program = /usr/local/bin/gpg
