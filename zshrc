@@ -17,27 +17,19 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
-alias redis="redis-server /usr/local/etc/redis.conf"
 
 # Ruby terminal snippets
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
 alias irb="irb --readline --prompt-mode simple"
-alias migrate="bundle exec rails db:migrate"
-alias foreman="bundle exec foreman start"
 
 # Docker alias
 alias dcb="docker compose build"
 alias dcu="docker compose up"
 alias dcr="docker compose run --rm"
 alias dce="docker compose exec"
-alias dcd="docker compose down" 
+alias dcd="docker compose down"
 
-# raspberry shortcuts
-alias unlock_pi="ssh -i ~/.ssh/id_dropbear root@rpi -p4444"
-
-# just to macOS
-alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 # binding keys
 bindkey '^?' backward-delete-char
