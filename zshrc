@@ -54,11 +54,6 @@ bindkey "^[[C" forward-char
 bindkey "^[[5~" up-line-or-history
 bindkey "^[[6~" down-line-or-history
 
-autoload -Uz vcs_info
-precmd() { vcs_info }
-
-zstyle ':vcs_info:git:*' formats '%b '
-
 # Enable menu selection
 zstyle ':completion:*' menu select
 
@@ -69,7 +64,6 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache/$HOST
 
-setopt PROMPT_SUBST
 setopt APPEND_HISTORY
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -82,7 +76,7 @@ setopt SHARE_HISTORY
 setopt HIST_NO_STORE
 
 autoload -U colors && colors
-PS1="%F{yellow}%~%f%{$reset_color%}%: %F{blue}${vcs_info_msg_0_}%f%% "
+PS1="%F{yellow}%~%f%{$reset_color%}%:: "
 
 if [[ `uname` == "Darwin"  ]]; then
   export PATH=/usr/local/bin:$PATH
