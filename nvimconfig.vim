@@ -8,13 +8,15 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+Plug 'roxma/nvim-yarp', { 'do': 'pip install -r requirements.txt' }
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'windwp/nvim-autopairs'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'dense-analysis/ale'
 call plug#end()
-
-require("nvim-autopairs").setup {}
 
 " Theming
 colorscheme solarized
@@ -23,15 +25,35 @@ set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set cursorline
 set hidden
+set incsearch
+set autoread
 set inccommand=split
 set mouse=a
-set number
+set nu
 set relativenumber
 set splitbelow splitright
+set signcolumn=yes
+set encoding=UTF-8
 set title
 set ttimeoutlen=0
 set wildmenu
-set t_Co=256
+set scrolloff=8
+set colorcolumn=100
+
+" Specific from solarized theme
+let g:solarized_termcolors=256
+let g:solarized_contrast = v:true
+let g:solarized_borders = v:false
+let g:solarized_disable_background = v:false
+let g:airline_theme = 'solarized'
+
+" Airline configuration
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+" Files
+filetype plugin indent on
+syntax on
 
 " Whitespace
 set nowrap                        " don't wrap lines
@@ -40,12 +62,6 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
-                                  " off and the line continues beyond the right of the screen
-                                  "
-" Files
-filetype plugin indent on
-syntax on
-
 
 " Leading
 let mapleader=","
@@ -60,6 +76,27 @@ autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
+
+
+" Ale configurations
+let g:ale_linters = {
+\}
+
+let g:ale_fixers = {
+\   '*': ['trim_whitespace'],
+\}
+
+let g:ale_fix_on_save = 1
+
+function! HighlightWordUnderCursor()
+    if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]'
+        exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/'
+    else
+        match none
+    endif
+endfunction
+
+autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 " find merge conflict markers
 nmap <silent> <leader>cf <ESC>/\v^[<=>]{7}( .*\|$)<CR>
