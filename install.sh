@@ -12,6 +12,7 @@ mkdir -p ~/.config/nvim
 
 ln -fs $DOTPATH/bundle_config ~/.bundle/config
 ln -fs $DOTPATH/gitconfig ~/.gitconfig
+ln -fs $DOTPATH/gitconfig.local.example ~/.gitconfig.local
 ln -fs $DOTPATH/gitignore ~/.gitignore
 ln -fs $DOTPATH/irbrc ~/.irbrc
 ln -fs $DOTPATH/rspec ~/.rspec
