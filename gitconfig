@@ -37,7 +37,7 @@
   whitespace = fix
 [core]
   editor = vim
-  excludesfile = /Users/weldyss/.gitignore
+  excludesfile = ~/.gitignore
 [help]
   autocorrect = 1
 [rerere]
@@ -53,9 +53,9 @@
 	smudge = git media smudge %f
 	required = true
 [commit]
-	template = /Users/weldyss/.gitmessage
+	template = ~/.gitmessage
 	gpgsign = true
 [init]
 	defaultBranch = main
-[gpg]
-	program = /opt/homebrew/bin/gpg
+[include]
+  path = ~/.gitconfig.local
