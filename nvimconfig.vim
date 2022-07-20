@@ -2,7 +2,6 @@ set nocompatible
 
 " Plugins
 call plug#begin()
-Plug 'shaunsingh/solarized.nvim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -16,11 +15,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'dense-analysis/ale'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 " Theming
-colorscheme solarized
-set background=dark
+set termguicolors
 set clipboard=unnamedplus
 set completeopt=noinsert,menuone,noselect
 set cursorline
@@ -41,8 +40,6 @@ set scrolloff=8
 set colorcolumn=100
 
 " Specific from solarized theme
-let g:solarized_termcolors=256
-let g:solarized_contrast = v:true
 let g:solarized_borders = v:false
 let g:solarized_disable_background = v:false
 let g:airline_theme = 'solarized'
