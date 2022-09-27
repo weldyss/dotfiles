@@ -79,8 +79,11 @@ autoload -U colors && colors
 PS1="%F{yellow}%~%f%{$reset_color%}%:: "
 
 if [[ `uname` == "Darwin"  ]]; then
-  export PATH=/usr/local/bin:$PATH
+  export PATH=/opt/homebrew/bin:$PATH
   export PATH=$(brew --prefix ruby)/bin:$PATH
 fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 source $HOME/.extras.zsh
+
