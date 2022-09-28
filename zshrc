@@ -31,6 +31,10 @@ alias dce="docker compose exec"
 alias dcd="docker compose down"
 
 
+alias gl="lazygit"
+
+alias mb="git symbolic-ref --short HEAD"
+
 # binding keys
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
@@ -82,6 +86,14 @@ if [[ `uname` == "Darwin"  ]]; then
   export PATH=/opt/homebrew/bin:$PATH
   export PATH=$(brew --prefix ruby)/bin:$PATH
 fi
+
+alias fzf="fzf --height=90% --reverse --border --preview 'cat {}' "
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
+--color=fg:#c0caf5,bg:#1a1b26,hl:#bb9af7
+--color=fg+:#c0caf5,bg+:#1a1b26,hl+:#7dcfff
+--color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff 
+--color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
