@@ -1,4 +1,4 @@
-gems = %w(rubygems irb/completion irb/ext/save-history wirble awesome_print pp)
+gems = %w(rubygems irb/completion irb/ext/save-history pp)
 
 gems.each do |gem_name|
   begin
