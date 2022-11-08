@@ -24,10 +24,7 @@
   lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   pl   = pull
   ps   = push
-  plm  = pull origin master
-  pld  = pull origin dev
-  pod  = push origin dev
-  pom  = push origin master
+  pc   = pull origin origin ${git rev-parse --abbrev-ref HEAD}
   info = config --list
   ch   = log --oneline --reverse
   tags = tag -n1 -l
@@ -36,26 +33,26 @@
 [apply]
   whitespace = fix
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore
 [help]
   autocorrect = 1
 [rerere]
   enabled = 1
 [push]
-	default = current
+  default = current
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [pull]
-	rebase = true
+  rebase = true
 [filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
 [commit]
-	template = ~/.gitmessage
-	gpgsign = true
+  template = ~/.gitmessage
+  gpgsign = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [include]
   path = ~/.gitconfig.local
