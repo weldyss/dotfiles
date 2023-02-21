@@ -31,7 +31,28 @@ alias dce="docker compose exec"
 alias dcd="docker compose down"
 
 
-alias gl="lazygit"
+# Some GL shortcuts
+function glb {
+  doppler run -- bundle exec $@
+}
+
+function glc {
+  doppler run -- $@
+}
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+fi
+
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+    export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
+else
+    export VISUAL="nvim"
+    export EDITOR="nvim"
+fi
+
+alias lg="lazygit"
 
 alias mb="git symbolic-ref --short HEAD"
 
@@ -99,3 +120,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 source $HOME/.extras.zsh
 
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

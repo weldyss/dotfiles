@@ -1,2 +1,2 @@
 [gpg]
-  program = /usr/bin/gpg
+  program = /opt/homebrew/bin/gpg

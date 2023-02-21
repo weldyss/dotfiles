@@ -33,7 +33,7 @@
 [apply]
   whitespace = fix
 [core]
-  editor = nvim
+  editor = "nvr --remote-wait-silent"
   excludesfile = ~/.gitignore
 [help]
   autocorrect = 1
@@ -56,3 +56,5 @@
   defaultBranch = main
 [include]
   path = ~/.gitconfig.local
+[fetch]
+  prune = true
