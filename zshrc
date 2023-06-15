@@ -30,7 +30,6 @@ alias dcr="docker compose run --rm"
 alias dce="docker compose exec"
 alias dcd="docker compose down"
 
-
 # Some GL shortcuts
 function glb {
   doppler run -- bundle exec $@
@@ -38,6 +37,13 @@ function glb {
 
 function glc {
   doppler run -- $@
+}
+
+function gld {
+  glb bundle install
+  yarn install --check-files
+  glc bin/rails db:reset
+  glc heroku local -f Procfile.dev
 }
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
@@ -51,8 +57,6 @@ else
     export VISUAL="nvim"
     export EDITOR="nvim"
 fi
-
-alias lg="lazygit"
 
 alias mb="git symbolic-ref --short HEAD"
 
@@ -119,7 +123,3 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $HOME/.extras.zsh
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
