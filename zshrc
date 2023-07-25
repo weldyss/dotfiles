@@ -40,10 +40,9 @@ function glc {
 }
 
 function gld {
-  glb bundle install
+  bundle install
   yarn install --check-files
   glc bin/rails db:reset
-  glc heroku local -f Procfile.dev
 }
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
