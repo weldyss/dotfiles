@@ -119,6 +119,10 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff 
 --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zsh/plugins/fzf/fzf-zsh-plugin.plugin.zsh ] && source ~/.zsh/plugins/fzf/fzf-zsh-plugin.plugin.zsh
+[ -f ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh ] && source ~/.zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
+[ -f ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+fpath=(~/.zsh/zsh-completions/zsh-completions.plugin.zsh $fpath)
 
 source $HOME/.extras.zsh
