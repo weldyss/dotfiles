@@ -52,6 +52,8 @@
 [commit]
   template = ~/.gitmessage
   gpgsign = true
+[gpg]
+  program = "if [[ `uname` == "Darwin" ]]; then ED='/opt/homebrew/bin/gpg'; else ED='/usr/bin/gpg'; fi; $ED"
 [init]
   defaultBranch = main
 [include]
