@@ -20,7 +20,7 @@ SAVEHIST=10000
 # general aliases
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias cat="bat"
-alias ls="eza --icons --color --git"
+alias ls="eza --icons --color always --git"
 # Ruby terminal snippets
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
