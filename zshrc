@@ -96,8 +96,6 @@ else
     export EDITOR="nvim"
 fi
 
-alias mb="git symbolic-ref --short HEAD"
-
 # binding keys
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
@@ -149,6 +147,14 @@ if [[ `uname` == "Darwin"  ]]; then
   export PATH=/opt/homebrew/bin:$PATH
   export PATH=$(brew --prefix ruby)/bin:$PATH
 fi
+
+# asdf configurations
+. "$HOME/.asdf/asdf.sh"
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 alias fzf="fzf --height=90% --reverse --border --preview 'cat {}' "
 
