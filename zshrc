@@ -28,6 +28,7 @@ alias irb="irb --readline --prompt-mode simple"
 
 # tmux aliases
 alias tn="tmux new -s $(pwd |sed 's/.*\///g')"
+alias ta="tmux attach -t $@" 
 
 # Docker alias
 alias dcb="docker compose build"
@@ -35,10 +36,6 @@ alias dcu="docker compose up"
 alias dcr="docker compose run --rm"
 alias dce="docker compose exec"
 alias dcd="docker compose down"
-
-function gitget {
-  git pull origin `git rev-parse --abbrev-ref HEAD`
-}
 
 # Some GL shortcuts
 function glb {

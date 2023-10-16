@@ -17,11 +17,6 @@ if defined?(IRB)
   IRB.conf[:USE_READLINE] = true
 end
 
-if defined?(Wirble) 
-  Wirble.init
-  Wirble.colorize
-end
-
 if defined?(AwesomePrint)
   AwesomePrint.irb!
 end
