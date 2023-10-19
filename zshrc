@@ -145,8 +145,12 @@ if [[ `uname` == "Darwin"  ]]; then
   export PATH=$(brew --prefix ruby)/bin:$PATH
 fi
 
-# asdf configurations
-. "$HOME/.asdf/asdf.sh"
+# asdf configurations Using or not homebrew
+if [[ `uname` == "Darwin" ]]; then
+  . $(brew --prefix asdf)/libexec/asdf.sh
+else
+  . "$HOME/.asdf/asdf.sh"
+fi
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
