@@ -30,6 +30,10 @@ alias irb="irb --readline --prompt-mode simple"
 alias tn="tmux new -s $(pwd |sed 's/.*\///g')"
 alias ta="tmux attach -t $@" 
 
+tmux-window-name() {
+  ($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
+}
+
 # Docker alias
 alias dcb="docker compose build"
 alias dcu="docker compose up"
