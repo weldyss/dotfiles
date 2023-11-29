@@ -28,6 +28,8 @@ fi
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
 alias irb="irb --readline --prompt-mode simple"
+alias brails="./bin/rails"
+alias brspec="be rspec"
 
 # tmux aliases
 alias tn="tmux new -s $(pwd |sed 's/.*\///g')"
