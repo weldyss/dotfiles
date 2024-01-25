@@ -28,7 +28,7 @@
   info = config --list
   ch   = log --oneline --reverse
   tags = tag -n1 -l
-  sync = "!f() { `git pc && git pub`; }; f"
+  sync = "!f() { git pc && git pub; }; f"
 [diff]
   renames = copy
 [apply]
