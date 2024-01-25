@@ -1,7 +1,8 @@
-Host weldserver
-HostName weldyss.cloudapp.net
-User weldyss
+Host aws
+HostName 18.228.134.183
+User ubuntu
 Port 22
+IdentityFile "~/Documents/Apps Config/wskey.pem"
 
 Host rpi
 HostName 192.168.15.3

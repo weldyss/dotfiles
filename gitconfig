@@ -28,6 +28,7 @@
   info = config --list
   ch   = log --oneline --reverse
   tags = tag -n1 -l
+  sync = pc && pub
 [diff]
   renames = copy
 [apply]

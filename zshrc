@@ -28,8 +28,9 @@ fi
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
 alias irb="irb --readline --prompt-mode simple"
-alias brails="./bin/rails"
-alias brspec="be rspec"
+alias br="./bin/rails"
+alias bs="be rspec"
+alias bc="be rubocop"
 
 # tmux aliases
 alias tn="tmux new -s $(pwd |sed 's/.*\///g')"
@@ -151,6 +152,7 @@ PS1="%F{yellow}%~%f%{$reset_color%}%:: "
 
 if [[ `uname` == "Darwin"  ]]; then
   export PATH=/opt/homebrew/bin:$PATH
+  export PATH=/opt/homebrew/sbin:$PATH
   export PATH=$(brew --prefix ruby)/bin:$PATH
 fi
 
