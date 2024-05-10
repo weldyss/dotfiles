@@ -13,6 +13,7 @@
   pager = true
   interactive = auto
 [alias]
+  staash = stash --all
   pub = "!f() { git push -u ${1:-origin} `git symbolic-ref HEAD`; }; f"
   a    = add
   st   = status
