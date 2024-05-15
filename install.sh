@@ -22,6 +22,8 @@ cp $DOTPATH/extras.zsh.example ~/.extras.zsh
 ln -fs $DOTPATH/zshrc ~/.zshrc
 ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
 
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+
 mkdir -p ~/.tmux/plugins
 git clone https://github.com:/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
