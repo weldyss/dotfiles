@@ -20,7 +20,7 @@ SAVEHIST=10000
 # general aliases
 alias clear_terminal="sudo rm -rf /private/var/log/asl*"
 alias cat="bat"
-alias ls="eza --icons --color always --git"
+alias ls="eza --icons --color always"
 if [[ `uname` == "Linux"  ]]; then
   alias lf="lfm"
 fi
@@ -183,3 +183,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 fpath=(~/.zsh/zsh-completions/zsh-completions.plugin.zsh $fpath)
 
 source $HOME/.extras.zsh
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
