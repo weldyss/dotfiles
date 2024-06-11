@@ -182,6 +182,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 fpath=(~/.zsh/zsh-completions/zsh-completions.plugin.zsh $fpath)
 
+eval "$(starship init zsh)"
+
 source $HOME/.extras.zsh
 
 # Generated for envman. Do not edit.

@@ -23,6 +23,7 @@ ln -fs $DOTPATH/i3-config $HOME/.config/i3/config
 cp $DOTPATH/extras.zsh.example ~/.extras.zsh
 ln -fs $DOTPATH/zshrc ~/.zshrc
 ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
+ln -fs $DOTPATH/rubocop.yml ~/.rubocop.yml
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
