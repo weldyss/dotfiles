@@ -47,6 +47,8 @@ alias dcr="docker compose run --rm"
 alias dce="docker compose exec"
 alias dcd="docker compose down"
 
+alias mybranch="git rev-parse --abbrev-ref HEAD"
+
 # Some GL shortcuts
 function glb {
   doppler run -- bundle exec $@
