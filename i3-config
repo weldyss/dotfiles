@@ -1,25 +1,17 @@
 set $mod Mod4
 
-default_border pixel 1
+default_border pixel 3
 default_floating_border none
 
 hide_edge_borders none
 
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 6
 bindsym $mod+n border normal
 
 font xft:URWGothic-Book 8
 
 
-
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -77,7 +69,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 
 # Theming
 # Theme colors
-client.focused #ffffff #25252c #ffffff #036082 #036082
+client.focused #ffffff #25252c #ffffff #036082 #E0B0D5
 client.focused_inactive #ffffff #25252c #ffffff #036082 #036082
 client.unfocused #ffffff #7e7f83 #ffffff #036082 #036082
 client.urgent #ffffff #25252c #ffffff #036082 #036082
