@@ -184,6 +184,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 fpath=(~/.zsh/zsh-completions/zsh-completions.plugin.zsh $fpath)
 
+# sourcing rust and cargo
+source $HOME/.cargo/env
+
 eval "$(starship init zsh)"
 
 source $HOME/.extras.zsh
