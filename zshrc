@@ -33,8 +33,8 @@ alias bs="be rspec"
 alias bc="be rubocop"
 
 # tmux aliases
-alias tn="tmux new -s $(pwd |sed 's/.*\///g')"
-alias ta="tmux attach -t $@" 
+alias tnew="tmux new -s $(pwd |sed 's/.*\///g')"
+alias tatt="tmux attach -t $@" 
 
 tmux-window-name() {
   ($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
