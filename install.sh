@@ -34,3 +34,7 @@ mkdir -p ~/.zsh/plugins
 git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions/
 git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab/
+
+# rust stuff
+curl https://sh.rustup.rs -sSf | sh
+
