@@ -40,3 +40,5 @@ git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab/
 # rust stuff
 curl https://sh.rustup.rs -sSf | sh
 
+# starship things
+curl -sS https://starship.rs/install.sh | sh
