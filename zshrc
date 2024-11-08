@@ -33,7 +33,7 @@ alias bs="be rspec"
 alias bc="be rubocop"
 
 # tmux aliases
-alias tnew="tmux new -s $(pwd |sed 's/.*\///g')"
+alias tnew="tmux new -s $(pwd | sed 's/.*\///g')"
 alias tatt="tmux attach -t $@" 
 
 tmux-window-name() {
@@ -160,7 +160,7 @@ fi
 
 # asdf configurations Using or not homebrew
 if [[ `uname` == "Darwin" ]]; then
-  . $(brew --prefix asdf)/libexec/asdf.sh
+  . "$(brew --prefix asdf)/libexec/asdf.sh"
 else
   . "$HOME/.asdf/asdf.sh"
 fi

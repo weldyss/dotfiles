@@ -1,0 +1,7 @@
+bundler
+gem-ctags
+neovim
+rubocop
+rubocop-performance
+rubocop-rails
+rubocop-rspec
