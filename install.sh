@@ -8,6 +8,7 @@ mkdir -p $HOME/.ssh
 mkdir -p $HOME/.bundle
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.config/i3
+mkdir -p $HOME/.config/zellij
 
 # Executing commands
 
@@ -22,7 +23,7 @@ ln -fs $DOTPATH/gitmessage ~/.gitmessage
 ln -fs $DOTPATH/i3-config $HOME/.config/i3/config
 cp $DOTPATH/extras.zsh.example ~/.extras.zsh
 ln -fs $DOTPATH/zshrc ~/.zshrc
-ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
+# ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
 ln -fs $DOTPATH/rubocop.yml ~/.rubocop.yml
 ln -fs $DOTPATH/default-gems ~/.default-gems
 ln -fs $DOTPATH/asdfrc ~/.asdfrc
@@ -30,8 +31,8 @@ ln -fs $DOTPATH/config.kdl ~/.config/zellij/config.kdl
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
-mkdir -p ~/.tmux/plugins
-git clone https://github.com:/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# mkdir -p ~/.tmux/plugins
+# git clone https://github.com:/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 mkdir -p ~/.zsh/plugins
 git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/plugins/zsh-completions
