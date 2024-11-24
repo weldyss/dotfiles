@@ -41,13 +41,6 @@ git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab/
 git clone https://github.com/weldyss/nvimfiles.git ~/.config/nvim/
 git clone https://github.com/weldyss/alacritty-files.git ~/.config/alacritty/
 
-# do some just on ubuntu
-if [ `uname` == 'Linux' ]; then
-  dconf load / < ubuntu/dconf-settings.ini
-  mkdir -p ~/.config/ulauncher
-  ln -fs $DOTPATH/ubuntu/ulauncher/settings.json ~/.config/ulauncher/settings.json
-fi
-
 # rust stuff
 curl https://sh.rustup.rs -sSf | sh
 
@@ -56,3 +49,10 @@ cargo install bat zellij zoxide eza
 
 # starship things
 curl -sS https://starship.rs/install.sh | sh
+
+# do some just on ubuntu
+if [ `uname` == 'Linux' ]; then
+  dconf load / < ubuntu/dconf-settings.ini
+  mkdir -p ~/.config/ulauncher
+  ln -fs $DOTPATH/ubuntu/ulauncher/settings.json ~/.config/ulauncher/settings.json
+fi
