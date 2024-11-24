@@ -26,6 +26,7 @@ ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
 ln -fs $DOTPATH/rubocop.yml ~/.rubocop.yml
 ln -fs $DOTPATH/default-gems ~/.default-gems
 ln -fs $DOTPATH/asdfrc ~/.asdfrc
+ln -fs $DOTPATH/config.kdl ~/.config/zellij/config.kdl 
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
 
@@ -39,6 +40,9 @@ git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab/
 
 # rust stuff
 curl https://sh.rustup.rs -sSf | sh
+
+# cargo
+cargo install bat zellij zoxide eza
 
 # starship things
 curl -sS https://starship.rs/install.sh | sh
