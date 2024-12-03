@@ -25,17 +25,18 @@ ln -fs $DOTPATH/tmux.conf ~/.tmux.conf
 ln -fs $DOTPATH/rubocop.yml ~/.rubocop.yml
 ln -fs $DOTPATH/default-gems ~/.default-gems
 ln -fs $DOTPATH/asdfrc ~/.asdfrc
-ln -fs $DOTPATH/config.kdl ~/.config/zellij/config.kdl 
+ln -fs $DOTPATH/zellij_config.kdl ~/.config/zellij/config.kdl 
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-
-mkdir -p ~/.tmux/plugins
-git clone https://github.com:/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-mkdir -p ~/.zsh/plugins
-git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions/
-git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab/
+asdf plugin add ruby
+asdf plugin add nodejs
+asdf plugin add python
+asdf install ruby latest
+asdf global ruby latest
+asdf install nodejs latest
+asdf global nodejs latest
+asdf install python latest
+asdf global python latest
 
 # triggering other dotfiles
 git clone https://github.com/weldyss/nvimfiles.git ~/.config/nvim/
