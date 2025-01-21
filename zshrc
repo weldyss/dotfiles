@@ -1,5 +1,7 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export GPG_TTY=$(tty) # Necessary to ask for password every new terminal session
+
 
 autoload -U compinit
 compinit -i
@@ -190,3 +192,4 @@ source $HOME/.cargo/env
 eval "$(starship init zsh)"
 
 source $HOME/.extras.zsh
+bindkey -e && bindkey '[C' forward-word && bindkey '[D' backward-word
