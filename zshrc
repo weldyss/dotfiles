@@ -160,15 +160,6 @@ if [[ `uname` == "Darwin"  ]]; then
   export PATH=$(brew --prefix ruby)/bin:$PATH
 fi
 
-# asdf configurations Using or not homebrew
-if [[ `uname` == "Darwin" ]]; then
-  . "$(brew --prefix asdf)/libexec/asdf.sh"
-else
-  . "$HOME/.asdf/asdf.sh"
-fi
-
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
@@ -190,6 +181,9 @@ fpath=(~/.zsh/zsh-completions/zsh-completions.plugin.zsh $fpath)
 source $HOME/.cargo/env
 
 eval "$(starship init zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+
+bindkey -e && bindkey '[C' forward-word && bindkey '[D' backward-word
+
 
 source $HOME/.extras.zsh
-bindkey -e && bindkey '[C' forward-word && bindkey '[D' backward-word
