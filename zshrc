@@ -184,6 +184,7 @@ eval "$(starship init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
 
 bindkey -e && bindkey '[C' forward-word && bindkey '[D' backward-word
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 source $HOME/.extras.zsh
