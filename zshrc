@@ -164,6 +164,7 @@ fi
 autoload -Uz compinit && compinit
 
 alias fzf="fzf --height=90% --reverse --border --preview 'cat {}' "
+alias cd="z "
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
 --color=fg:#c0caf5,bg:#1a1b26,hl:#bb9af7
@@ -182,6 +183,7 @@ source $HOME/.cargo/env
 
 eval "$(starship init zsh)"
 eval "$(~/.local/bin/mise activate zsh)"
+eval "$(zoxide init zsh)"
 
 bindkey -e && bindkey '[C' forward-word && bindkey '[D' backward-word
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
