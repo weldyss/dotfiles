@@ -27,7 +27,7 @@ alias ls="eza --icons --color always"
 alias be="bundle exec"
 alias bi="bundle install --path vendor"
 alias irb="irb --readline --prompt-mode simple"
-alias br="./bin/rails"
+alias br="bin/rails"
 alias bs="be rspec"
 alias bc="be rubocop"
 
