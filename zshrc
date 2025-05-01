@@ -63,6 +63,21 @@ function gld {
   glc bin/rails db:reset
 }
 
+function clean_mac {
+ # getting the df -h with filters before and after cleaning
+  sudo tmutil thinlocalsnapshots / 10000000000 4
+  sudo rm -rf /Library/Caches/*
+  sudo rm -rf ~/Library/Caches/*
+  sudo rm -rf /private/var/log/*
+  rm -rf ~/Library/Logs/*
+  ~/Library/Application Support/MobileSync/Backup
+  rm -rf ~/Library/Developer/Xcode/Archives/*
+  rm -rf ~/Library/Developer/Xcode/DerivedData/*
+  rm -rf ~/Library/Developer/CoreSimulator/*
+  sudo rm /private/var/vm/sleepimage
+  sudo rm /private/var/vm/swapfile*
+}
+
 _zlf() {
     emulate -L zsh
     local d=$(mktemp -d) || return 1
