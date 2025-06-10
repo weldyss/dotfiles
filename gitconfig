@@ -55,7 +55,7 @@
   template = ~/.gitmessage
   gpgsign = true
 [gpg]
-  program = "gpg"
+	program = /opt/homebrew/bin/gpg
 [init]
   defaultBranch = main
 [include]
