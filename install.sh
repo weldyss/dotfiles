@@ -33,7 +33,9 @@ git clone https://github.com/weldyss/alacritty-files.git ~/.config/alacritty/
 curl https://sh.rustup.rs -sSf | sh
 
 # cargo
-cargo install bat zoxide eza
+cargo install bat zoxide eza 
 
 # starship things
+sudo mkdir -p /usr/local/bin
+sudo chmod `whoami` /usr/local/bin
 curl -sS https://starship.rs/install.sh | sh
