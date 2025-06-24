@@ -6,6 +6,7 @@ DOTPATH=`pwd`
 mkdir -p $HOME/.ssh
 mkdir -p $HOME/.bundle
 mkdir -p $HOME/.config/nvim
+mkdir -p $HOME/.zsh/plugins
 
 # Executing commands
 ln -fs $DOTPATH/bundle_config ~/.bundle/config
@@ -34,6 +35,13 @@ curl https://sh.rustup.rs -sSf | sh
 
 # cargo
 cargo install bat zoxide eza 
+
+# zsh plugins
+git clone --depth 1 git@github.com:unixorn/fzf-zsh-plugin.git ~/.zsh/plugins/fzf
+git clone https://github.com/Aloxaf/fzf-tab ~/.zsh/plugins/fzf-tab
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions.git ~/.zsh/plugins/zsh-completions
+
 
 # starship things
 sudo mkdir -p /usr/local/bin

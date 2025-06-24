@@ -1,7 +1,5 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export GPG_TTY=$(tty) # Necessary to ask for password every new terminal session
-
 
 autoload -U compinit
 compinit -i
@@ -176,7 +174,8 @@ fi
 autoload -Uz compinit && compinit
 
 alias fzf="fzf --height=90% --reverse --border --preview 'cat {}' "
-alias cd="z "
+
+source <(fzf --zsh)
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
 --color=fg:#c0caf5,bg:#1a1b26,hl:#bb9af7
