@@ -30,7 +30,7 @@ alias bs="be rspec"
 alias bc="be rubocop"
 
 # tmux aliases
-alias tnew="tmux new -s $(pwd | sed 's/.*\///g')"
+alias tnew="tmux new -s `pwd | sed 's/.*\///g'`"
 alias tatt="tmux attach -t $@" 
 
 tmux-window-name() {
