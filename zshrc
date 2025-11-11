@@ -56,8 +56,8 @@ function glc {
 }
 
 function gld {
-  bundle install
-  yarn install --check-files
+  glc bundle install
+  glc yarn install --check-files
   glc bin/rails db:reset
 }
 
@@ -193,7 +193,7 @@ fpath=(~/.zsh/zsh-completions/zsh-completions.plugin.zsh $fpath)
 source $HOME/.cargo/env
 
 eval "$(starship init zsh)"
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(`which mise` activate zsh)"
 eval "$(zoxide init zsh)"
 
 bindkey -e && bindkey '[C' forward-word && bindkey '[D' backward-word
