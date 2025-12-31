@@ -57,7 +57,7 @@ function glc {
 
 function gld {
   glc bundle install
-  glc yarn install --check-files
+  yarn install --check-files
   glc bin/rails db:reset
 }
 
