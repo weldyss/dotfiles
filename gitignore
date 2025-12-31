@@ -3,7 +3,6 @@
 # ruby projects
 log/*
 *.sqlite3
-db/schema.rb
 .rvmrc
 public/images/products/*
 public/assets/*
